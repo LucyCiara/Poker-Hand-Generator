@@ -11,8 +11,20 @@ public class Hand {
   // "A", "10", "J", "Q", "K"
   // };
 
+  public Hand() {
+    this(new ArrayList<Card>());
+  }
+
   public Hand(List<Card> cards) {
     this.cards = cards;
+  }
+
+  public List<Card> getCards() {
+    return this.cards;
+  }
+
+  public void addCard(Card card) {
+    this.cards.add(card);
   }
 
   // private List<String> getSymbols() {
