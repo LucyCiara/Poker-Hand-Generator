@@ -1,5 +1,6 @@
 package edu.ntnu.lucyciara.view;
 
+import edu.ntnu.lucyciara.controller.DeckController;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -116,5 +117,30 @@ public class MainPage {
 
   public Scene getScene() {
     return this.scene;
+  }
+
+  public void setCards(String cardsString) {
+    this.cards.setText(cardsString);
+  }
+
+  public void setSum(String sumString) {
+    this.sumResult.setText(sumString);
+  }
+
+  public void setHearts(String heartString) {
+    this.cardsOfHeartsResult.setText(heartString);
+  }
+
+  public void setFlush(String flushString) {
+    this.flushResult.setText(flushString);
+  }
+
+  public void setQueenOfSpades(String queenOfSpadesString) {
+    this.queenOfSpadesResult.setText(queenOfSpadesString);
+  }
+
+  public void setController(DeckController controller) {
+    this.deal.setOnAction(e -> controller.drawHand());
+    this.checkHand.setOnAction(e -> controller.checkHand());
   }
 }
