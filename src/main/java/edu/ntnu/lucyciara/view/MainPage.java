@@ -8,6 +8,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
+/**
+ * A class for creating the main and only page, and methods for tying the UI to the controller.
+ */
 public class MainPage {
   private Scene scene;
   private HBox layout;

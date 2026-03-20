@@ -1,5 +1,8 @@
 package edu.ntnu.lucyciara.util;
 
+/**
+ * A utility class for checking if parameters throw exceptions.
+ */
 public final class ParameterCheck {
     private ParameterCheck() { };
    

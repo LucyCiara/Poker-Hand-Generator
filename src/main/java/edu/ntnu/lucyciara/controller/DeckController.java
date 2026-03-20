@@ -7,6 +7,9 @@ import edu.ntnu.lucyciara.model.DeckOfCards;
 import edu.ntnu.lucyciara.model.Hand;
 import edu.ntnu.lucyciara.view.MainPage;
 
+/**
+ * A class for communicating between the model classes and the MainPage's UI, with a methods for button actions.
+ */
 public class DeckController {
     private MainPage mainPage;
     private DeckOfCards deck;

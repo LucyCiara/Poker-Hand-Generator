@@ -9,6 +9,9 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+/**
+ * The App class that ties the MVC structure together.
+ */
 public class App extends Application {
 
   public static void main(String[] args) {

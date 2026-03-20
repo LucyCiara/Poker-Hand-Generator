@@ -2,6 +2,9 @@ package edu.ntnu.lucyciara.model;
 
 import edu.ntnu.lucyciara.util.ParameterCheck;
 
+/**
+ * A class for card objects, containing information about suit and symbol, and with a method for finding the value.
+ */
 public class Card {
   private String suit;
   private String symbol;

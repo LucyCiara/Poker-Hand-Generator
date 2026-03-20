@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * A class for a whole deck of cards, with a method for drawing a hand and for getting the entire deck.
+ */
 public class DeckOfCards {
   private static final String[] SUITS = new String[] { "Hearts", "Diamonds", "Spades", "Clovers" };
   private static final String[] SYMBOLS = new String[] {

@@ -6,6 +6,9 @@ import java.util.List;
 
 import edu.ntnu.lucyciara.util.ParameterCheck;
 
+/**
+ * A class that contains multiple Cards, with methods for analyzing the hand and adding more cards.
+ */
 public class Hand {
   private List<Card> cards;
 
