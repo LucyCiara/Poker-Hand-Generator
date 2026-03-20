@@ -65,4 +65,14 @@ public class Hand {
     }
     return false;
   }
+
+  public List<Card> countSuit(String suit) {
+    List<Card> cards = new ArrayList<Card>();
+    for (Card card : this.cards) {
+      if (card.getSuit().equals(suit)) {
+        cards.add(card);
+      }
+    }
+    return cards;
+  }
 }

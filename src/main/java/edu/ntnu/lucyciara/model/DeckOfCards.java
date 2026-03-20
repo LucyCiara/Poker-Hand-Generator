@@ -32,13 +32,14 @@ public class DeckOfCards {
     return card;
   }
 
-  private Card drawSuit(String suit) {
-    List<Card> suitCards = this.drawPile.stream().filter(card -> card.getSuit().equals(suit)).toList();
-    int index = this.random.nextInt(suitCards.size());
-    Card card = suitCards.get(index);
-    this.drawPile.remove(card);
-    return card;
-  }
+  // private Card drawSuit(String suit) {
+  // List<Card> suitCards = this.drawPile.stream().filter(card ->
+  // card.getSuit().equals(suit)).toList();
+  // int index = this.random.nextInt(suitCards.size());
+  // Card card = suitCards.get(index);
+  // this.drawPile.remove(card);
+  // return card;
+  // }
 
   public Hand dealHand(int n) {
     Hand hand = new Hand();
@@ -49,12 +50,12 @@ public class DeckOfCards {
     return hand;
   }
 
-  public Hand dealSuitHand(int n, String suit) {
-    Hand hand = new Hand();
-    for (int i = 0; i < n; i++) {
-      hand.addCard(this.drawSuit(suit));
-    }
-    this.drawPile = new ArrayList<Card>(this.deck);
-    return hand;
-  }
+  // public Hand dealSuitHand(int n, String suit) {
+  // Hand hand = new Hand();
+  // for (int i = 0; i < n; i++) {
+  // hand.addCard(this.drawSuit(suit));
+  // }
+  // this.drawPile = new ArrayList<Card>(this.deck);
+  // return hand;
+  // }
 }
