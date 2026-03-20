@@ -42,6 +42,11 @@ public class DeckOfCards {
   // }
 
   public Hand dealHand(int n) {
+    if (n > deck.size()) {
+      throw new IllegalArgumentException("n can't be more than the size of the deck");
+    } else if (n < 1) {
+      throw new IllegalArgumentException("n can't be less than 1");
+    }
     Hand hand = new Hand();
     for (int i = 0; i < n; i++) {
       hand.addCard(this.draw());
@@ -58,4 +63,8 @@ public class DeckOfCards {
   // this.drawPile = new ArrayList<Card>(this.deck);
   // return hand;
   // }
+
+  public List<Card> getCards() {
+    return this.deck;
+  }
 }

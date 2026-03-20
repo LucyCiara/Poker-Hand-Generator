@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import edu.ntnu.lucyciara.util.ParameterCheck;
+
 public class Hand {
   private List<Card> cards;
 
@@ -16,6 +18,7 @@ public class Hand {
   }
 
   public Hand(List<Card> cards) {
+    ParameterCheck.objectValidation(cards, "cards"); 
     this.cards = cards;
   }
 
@@ -23,7 +26,8 @@ public class Hand {
     return this.cards;
   }
 
-  public void addCard(Card card) {
+  public void addCard(Card card) { 
+    ParameterCheck.objectValidation(card, "card"); 
     this.cards.add(card);
   }
 
@@ -58,6 +62,8 @@ public class Hand {
   }
 
   public boolean checkHasCard(String suit, String symbol) {
+    ParameterCheck.stringValidation(suit, "suit");
+    ParameterCheck.stringValidation(symbol, "symbol");
     for (Card card : this.cards) {
       if (card.getSuit().equals(suit) && card.getSymbol().equals(symbol)) {
         return true;
@@ -67,6 +73,7 @@ public class Hand {
   }
 
   public List<Card> countSuit(String suit) {
+    ParameterCheck.stringValidation(suit, "suit");
     List<Card> cards = new ArrayList<Card>();
     for (Card card : this.cards) {
       if (card.getSuit().equals(suit)) {

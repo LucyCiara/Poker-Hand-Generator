@@ -1,10 +1,14 @@
 package edu.ntnu.lucyciara.model;
 
+import edu.ntnu.lucyciara.util.ParameterCheck;
+
 public class Card {
   private String suit;
   private String symbol;
 
   public Card(String suit, String symbol) {
+    ParameterCheck.stringValidation(suit, "suit");
+    ParameterCheck.stringValidation(symbol, "symbol");
     this.suit = suit;
     this.symbol = symbol;
   }
@@ -18,20 +22,25 @@ public class Card {
   }
 
   public int[] getValue() {
+    int[] value;
     try {
-      return new int[] { Integer.parseInt(this.symbol) };
+      value = new int[] { Integer.parseInt(this.symbol) };
+      if (value[0] > 10 || value[0] < 2) {
+        value = new int[] {0};
+      }
     } catch (Exception e) {
       if (symbol.equals("J")) {
-        return new int[] { 11 };
+        value = new int[] { 11 };
       } else if (symbol.equals("Q")) {
-        return new int[] { 12 };
+        value = new int[] { 12 };
       } else if (symbol.equals("K")) {
-        return new int[] { 13 };
+        value = new int[] { 13 };
       } else if (symbol.equals("A")) {
-        return new int[] { 1, 14 };
+        value = new int[] { 1, 14 };
       } else {
-        return new int[] { 0 };
+        value = new int[] { 0 };
       }
     }
+    return value;
   }
 }
